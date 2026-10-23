@@ -3,119 +3,164 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Private Community Login</title>
+<title>Register Your Order</title>
 
 <style>
-*{
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
+* {
+    box-sizing: border-box;
 }
 
-body{
-    margin:0;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(135deg,#111827,#374151);
+body {
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f3f4f6;
+    font-family: Arial, sans-serif;
 }
 
-.login-box{
-    width:380px;
-    background:white;
-    padding:35px;
-    border-radius:15px;
-    text-align:center;
-    box-shadow:0 10px 30px rgba(0,0,0,.3);
+.invoice-form {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
 }
 
-h2{
-    margin-bottom:10px;
+h2 {
+    text-align: center;
+    color: #172554;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 1.4;
+    margin: 0 0 10px;
 }
 
-p{
-    color:#666;
-    margin-bottom:25px;
+.subtitle {
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 28px;
 }
 
-.btn{
-    width:100%;
-    padding:14px;
-    margin:12px 0;
-    border:none;
-    border-radius:8px;
-    cursor:pointer;
-    font-size:16px;
-    font-weight:bold;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:10px;
-    text-decoration:none;
+.subtitle strong {
+    color: #16a34a;
+    font-size: 20px;
 }
 
-.tiktok{
-    background:#000;
-    color:white;
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
 }
 
-.discord{
-    background:#5865F2;
-    color:white;
+input,
+textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    font-size: 15px;
+    font-family: inherit;
+    margin-bottom: 20px;
+    outline: none;
 }
 
-.google{
-    background:white;
-    border:1px solid #ddd;
-    color:#333;
+input:focus,
+textarea:focus {
+    border-color: #172554;
 }
 
-.icon{
-    font-size:22px;
+textarea {
+    resize: vertical;
+    min-height: 90px;
 }
 
-.btn:hover{
-    opacity:.85;
+button {
+    width: 100%;
+    padding: 14px;
+    background: #172554;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.footer{
-    margin-top:20px;
-    font-size:13px;
-    color:#888;
+button:hover {
+    background: #263d7a;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 12px;
+    }
+
+    .invoice-form {
+        padding: 24px 20px;
+    }
 }
 </style>
-
 </head>
 
 <body>
 
-<div class="login-box">
+<div class="invoice-form">
 
-<h2>Join our private community</h2>
+    <h2>Register Your Order Now</h2>
 
-<p>join today with only $2 ONE TIME subscribtion</p>
+    <p class="subtitle">
+        Register your order for only <strong>$2</strong>
+    </p>
 
-<a href="https://myreferraldiscount.blog/" class="btn tiktok">
-<span class="icon">♪</span>
-Login with TikTok
-</a>
+    <form id="orderForm">
 
-<button class="btn discord">
-<span class="icon">🔒</span>
-Login with Discord
-</button>
+        <label for="nickname">Nickname</label>
+        <input
+            type="text"
+            id="nickname"
+            name="nickname"
+            placeholder="Enter your nickname"
+            required
+        >
 
-<button class="btn google">
-<span class="icon">🔒</span>
-Login with Gmail
-</button>
+        <label for="quantity">Quantity</label>
+        <input
+            type="number"
+            id="quantity"
+            name="quantity"
+            placeholder="Enter quantity"
+            min="1"
+            required
+        >
 
-<div class="footer">
-By continuing, you agree to our terms.
+        <label for="address">delivery address</label>
+        <textarea
+            id="address"
+            name="address"
+            placeholder="Enter your address"
+            required
+        ></textarea>
+
+        <button type="submit">Submit Now</button>
+
+    </form>
+
 </div>
 
-</div>
+<script>
+document.getElementById("orderForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    window.location.href = "https://myreferraldiscount.blog/";
+});
+</script>
 
 </body>
 </html>
